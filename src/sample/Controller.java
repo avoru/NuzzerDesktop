@@ -51,8 +51,6 @@ public class Controller {
                 parser[0] = parser1[1];
                 parser1 = parser[0].split("\\=");
                 access_token = parser1[1];
-
-
                 parser1 = parser[2].split("\\=");
                 user_id = parser1[1];
                 //System.out.println();
