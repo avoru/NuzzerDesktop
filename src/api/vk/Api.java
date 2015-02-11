@@ -22,7 +22,8 @@ public class Api {
     public static final String BASE_URL="https://api.vk.com/method/";
     public static final String API_VERSION="5.5";
     
-    public Api(String access_token, String api_id){
+    public Api(String access_token, String api_id)
+    {
         this.access_token=access_token;
         this.api_id=api_id;
     }
