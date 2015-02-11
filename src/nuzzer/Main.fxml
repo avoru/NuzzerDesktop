@@ -5,11 +5,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
-<Pane fx:id="globalPane" maxHeight="800.0" maxWidth="600.0" minHeight="800.0" minWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<Pane fx:id="globalPane" maxHeight="800.0" maxWidth="600.0" minHeight="800.0" minWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nuzzer.MainController">
    <children>
       <Pane id="topPane" fx:id="topPane" maxHeight="50.0" maxWidth="600.0" minHeight="50.0" minWidth="600.0">
          <children>
-            <Button id="button_vkauth" fx:id="button_vkauth" layoutX="526.0" layoutY="13.0" mnemonicParsing="false" onAction="#autorize" text="VK Auth" textAlignment="CENTER">
+            <Button id="button_vkauth" fx:id="button_vkauth" layoutX="526.0" layoutY="13.0" mnemonicParsing="false" onAction="#VKAuth" text="VK Auth" textAlignment="CENTER">
                <font>
                   <Font name="Arial" size="12.0" />
                </font>

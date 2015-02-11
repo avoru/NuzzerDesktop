@@ -16,12 +16,14 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.zip.GZIPInputStream;
 
-public class Api {
+public class Api
+{
     static final String TAG="Kate.Api";
     
     public static final String BASE_URL="https://api.vk.com/method/";
     public static final String API_VERSION="5.5";
-    
+    public static final String APP_ID="4774209";
+
     public Api(String access_token, String api_id)
     {
         this.access_token=access_token;
