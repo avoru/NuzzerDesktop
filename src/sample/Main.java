@@ -18,8 +18,6 @@ public class Main extends Application
         //primaryStage1.setScene(new Scene(root1,12,12));
         primaryStage.show();
         //primaryStage1.show();
-
-        ///sdfsdfsdfsdfweaewe
     }
 
     public static void main(String[] args)
