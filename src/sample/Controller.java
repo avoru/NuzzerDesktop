@@ -10,13 +10,11 @@ import java.io.IOException;
 public class Controller {
 
     @FXML WebView WV;
-    //WebEngine WE = new WebEngine();
     String url1="https://oauth.vk.com/authorize?client_id=4775337&scope=wall&redirect_uri=https://oauth.vk.com/blank.html&display=popup&v=5.28&response_type=token";
     String access_token;
     String user_id;
     //String[] parser;
     String[] parser1;
-
 
     public void autorize() throws IOException
     {
