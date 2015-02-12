@@ -1,6 +1,7 @@
 package nuzzer;
 
 import api.vk.Api;
+import javafx.beans.binding.DoubleBinding;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -16,7 +17,7 @@ public class MainController {
     String user_id;
     //Controller_VK hyi;
     String[] parser1;
-
+    public static DoubleBinding db;
     public static Stage primaryStage;
 
     public void VKAuth() throws IOException
@@ -24,11 +25,11 @@ public class MainController {
         primaryStage = new Stage();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("vk/auth/authorize.fxml"));
         Parent root = loader.load();
-        primaryStage.setScene(new Scene(root, 300, 300));
+        primaryStage.setScene(new Scene(root, 610, 400));
         VkController vkController = loader.getController();
         vkController.setStage(primaryStage);
         primaryStage.show();
-        
+        db = primaryStage.getScene().widthProperty().subtract(610);
         vkController.start();
     }
 }
