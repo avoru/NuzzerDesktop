@@ -8,7 +8,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 //Fields are optional. Should be null if not populated
-public class User implements Serializable {
+public class User implements Serializable
+{
     private static final long serialVersionUID = 1L;
     public long uid;
     public String first_name;

@@ -21,11 +21,10 @@ public class VkBrowser extends Region
 
     public VkBrowser()
     {
-        //apply the styles
-        getStyleClass().add("browser");
-
+        // Загрузка страници авторизации
         load("https://oauth.vk.com/authorize?client_id=4775337&scope=65536&redirect_uri=https://oauth.vk.com/blank.html&display=popup&v=5.28&response_type=token");
 
+        //Парсинг access_token
         webEngine.locationProperty().addListener(new ChangeListener<String>()
         {
             @Override
@@ -46,13 +45,13 @@ public class VkBrowser extends Region
                         parser1 = parser[2].split("\\=");
                         Log.e("user_id", parser1[1]);
                         user_id = parser1[1];
-                        MainController.api = new Api(access_token, user_id);
-                        if(access_token.length() != 0)
+                        MainController.vkApi = new Api(access_token, user_id);
+                        if(access_token.length() != 0)  //Если access_token получен - закрытие окна авторизации ВКонтакте
                         {
-                            VkController.closeStage();
+                            MainController.vkController.vkStage.close();
                         }
                     }
-                    else
+                    else // При перенаправлении на другие страници - возврат на исходную страницу авторизации
                     if (newValue.startsWith("https://vk.com/") || newValue.startsWith("http://vk.com/join?reg=1"))
                     {
                         Platform.runLater(new Runnable()
@@ -73,7 +72,7 @@ public class VkBrowser extends Region
             }
         });
 
-        //add components
+        // Добавление на vkScene WebView browser
         getChildren().add(browser);
     }
 
@@ -82,11 +81,10 @@ public class VkBrowser extends Region
         webEngine.load(url);
     }
 
+    // Изменение размеров WebView browser как у vkScene
     @Override
     protected void layoutChildren()
     {
-        double w = getWidth();
-        double h = getHeight();
-        layoutInArea(browser, 0, 0, w, h, 0, HPos.CENTER, VPos.CENTER);
+        layoutInArea(browser, 0, 0, getWidth(), getHeight(), 0, HPos.CENTER, VPos.CENTER);
     }
 }

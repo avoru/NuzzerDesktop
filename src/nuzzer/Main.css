@@ -1,0 +1,18 @@
+#button_vkauth {
+    -fx-arc-width: 117px;
+}
+
+.button {
+    -fx-background-color: #6383a8;
+    -fx-border-radius: 2px;
+    -fx-text-fill: white;
+    -fx-font-family: tahoma, arial, verdana, sans-serif, Lucida Sans;
+}
+
+.button:active {
+    -fx-background-color: #5c7ca1
+}
+
+.button:hover {
+    -fx-background-color: #6d8cb0
+}

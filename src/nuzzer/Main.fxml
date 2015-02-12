@@ -9,7 +9,7 @@
    <children>
       <Pane id="topPane" fx:id="topPane" maxHeight="50.0" maxWidth="600.0" minHeight="50.0" minWidth="600.0">
          <children>
-            <Button id="button_vkauth" fx:id="button_vkauth" layoutX="526.0" layoutY="13.0" mnemonicParsing="false" onAction="#VKAuth" text="VK Auth" textAlignment="CENTER">
+            <Button id="button_vkauth" fx:id="button_vkauth" layoutX="440.0" layoutY="14.0" mnemonicParsing="false" onAction="#onClick_vkAuth" styleClass="button" text="Войти через ВКонтакте" textAlignment="CENTER">
                <font>
                   <Font name="Arial" size="12.0" />
                </font>

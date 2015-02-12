@@ -6,7 +6,8 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class Newsfeed {
+public class Newsfeed
+{
     public ArrayList<NewsItem> items=new ArrayList<NewsItem>();
     public ArrayList<User> profiles;
     public ArrayList<Group> groups;

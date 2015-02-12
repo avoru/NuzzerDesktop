@@ -7,7 +7,8 @@ import utils.Log;
 
 import java.util.ArrayList;
 
-public class NewsItem {
+public class NewsItem
+{
     public String type;
     public long source_id;
     public long from_id;//когда пост приходит в комментариях, то в source_id там стена, а в from_id автор сообщения.

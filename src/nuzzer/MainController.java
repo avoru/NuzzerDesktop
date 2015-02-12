@@ -7,28 +7,39 @@ import nuzzer.vk.auth.VkBrowser;
 import nuzzer.vk.auth.VkController;
 import utils.Log;
 
-import java.io.IOException;
-
 public class MainController
 {
-    public static Api api = null;
-    Stage vkStage;
+    public static Api vkApi = null;
+    public static VkController vkController;
 
-    public void VKAuth() throws IOException
+    public void onClick_vkAuth()
     {
-        if(api == null)
+        if(vkApi == null) //Проверка на существование access_token
         {
-            Log.e("API", "NULL");
-            vkStage = new Stage();
-            VkController vkController = new VkController();
-            vkController.initiate(vkStage, new Scene(new VkBrowser(), 750, 500));
-            vkStage.show();
+            if(vkController == null)  //Проверка существования окна авторизации ВКонтакте
+            {
+                Log.e("API", "NULL");
+                vkController = new VkController();
+                vkController.initiate(new Stage(), new Scene(new VkBrowser(), 500, 450)); // Инициализация окна авторизации ВКонтакте
+                vkController.vkStage.show();
+            }
+            else
+            {
+                if (vkController.vkStage.isShowing())  //Если окно создано - перенаправление на него
+                {
+                    vkController.vkStage.requestFocus();
+                }
+                else
+                {
+                    vkController.vkStage.show();
+                }
+            }
         }
-        else
+        else  // vkApi и accsess_token уже созданы
         {
             Log.e("API", "ACCESS");
-            Log.e("access_token", api.getAccessToken());
-            Log.e("user_id", api.getApiId());
+            Log.e("access_token", vkApi.getAccessToken());
+            Log.e("user_id", vkApi.getApiId());
         }
     }
 }
