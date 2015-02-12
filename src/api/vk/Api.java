@@ -37,6 +37,16 @@ public class Api
     
     String access_token;
     String api_id;
+
+    public String getAccessToken()
+    {
+        return access_token;
+    }
+
+    public String getApiId()
+    {
+        return api_id;
+    }
     
     //TODO: it's not faster, even slower on slow devices. Maybe we should add an option to disable it. It's only good for paid internet connection.
     static boolean enable_compression=true;
