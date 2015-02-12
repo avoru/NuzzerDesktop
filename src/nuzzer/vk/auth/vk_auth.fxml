@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<?import java.lang.*?>
-<?import javafx.scene.web.*?>
-<?import javafx.scene.web.WebView?>
-
-
-<WebView id="Authorize_vk" fx:id="Authorize_vk" maxHeight="500.0" maxWidth="600.0" minHeight="500.0" minWidth="500.0" prefHeight="-1.0" prefWidth="-1.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nuzzer.vk.auth.VkController" />

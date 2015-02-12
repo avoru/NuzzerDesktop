@@ -1,35 +1,23 @@
 package nuzzer;
 
 import api.vk.Api;
-import javafx.beans.binding.DoubleBinding;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import nuzzer.vk.auth.VkBrowser;
 import nuzzer.vk.auth.VkController;
 
 import java.io.IOException;
 
-public class MainController {
+public class MainController
+{
     public static Api api;
-   // @FXML WebView test;
-    String access_token;
-    String user_id;
-    //Controller_VK hyi;
-    String[] parser1;
-    public static DoubleBinding db;
-    public static Stage primaryStage;
+    public static Stage vkStage;
 
     public void VKAuth() throws IOException
     {
-        primaryStage = new Stage();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("vk/auth/authorize.fxml"));
-        Parent root = loader.load();
-        primaryStage.setScene(new Scene(root, 610, 400));
-        VkController vkController = loader.getController();
-        vkController.setStage(primaryStage);
-        primaryStage.show();
-        db = primaryStage.getScene().widthProperty().subtract(610);
-        vkController.start();
+        vkStage = new Stage();
+        VkController vkController = new VkController();
+        vkController.initiate(vkStage, new Scene(new VkBrowser(), 750, 500));
+        vkStage.show();
     }
 }
