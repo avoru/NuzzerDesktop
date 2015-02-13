@@ -1,18 +1,30 @@
-#button_vkauth {
-    -fx-arc-width: 117px;
+#mainPane
+{
+    -fx-background-color: #1ba81c;
 }
 
-.button {
-    -fx-background-color: #6383a8;
-    -fx-border-radius: 2px;
+#topPane
+{
+    -fx-background-color: #56789c
+}
+
+.button
+{
     -fx-text-fill: white;
-    -fx-font-family: tahoma, arial, verdana, sans-serif, Lucida Sans;
+    -fx-background-color: #486a8d;
+    -fx-background-radius: 0px;
 }
 
-.button:active {
-    -fx-background-color: #5c7ca1
+.button:hover
+{
+    -fx-text-fill: white;
+    -fx-background-color: #345579;
+    -fx-background-radius: 0px;
 }
 
-.button:hover {
-    -fx-background-color: #6d8cb0
+.button:pressed
+{
+    -fx-text-fill: white;
+    -fx-background-color: #486a8d;
+    -fx-background-radius: 0px;
 }

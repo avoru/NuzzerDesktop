@@ -48,7 +48,7 @@ public class VkBrowser extends Region
                         MainController.vkApi = new Api(access_token, user_id);
                         if(access_token.length() != 0)  //Если access_token получен - закрытие окна авторизации ВКонтакте
                         {
-                            MainController.vkController.vkStage.close();
+                            MainController.vkController.getStage().close();
                         }
                     }
                     else // При перенаправлении на другие страници - возврат на исходную страницу авторизации
